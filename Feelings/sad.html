@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    const showElementsButton = document.getElementById('showElementsButton');
+    const container = document.getElementById('container');
+    
+    showElementsButton.addEventListener('click', function() {
+        // Create and append textarea
+        const textarea = document.createElement('textarea');
+        container.appendChild(textarea);
+    
+        // Create and append radio buttons
+        const radio1 = document.createElement('input');
+        radio1.type = 'radio';
+        radio1.name = 'radioGroup';
+        container.appendChild(radio1);
+    
+        const radio2 = document.createElement('input');
+        radio2.type = 'radio';
+    radio2.name = 'radioGroup';
+    container.appendChild(radio2);
+
+    // Create and append span text
+    const spanText = document.createElement('span');
+    spanText.textContent = 'This is a span text.';
+    container.appendChild(spanText);
+
+    // Create and append submit button
+    const submitButton = document.createElement('button');
+    submitButton.textContent = 'Submit';
+    container.appendChild(submitButton);
+});
+</script>
+</body>
+</html>

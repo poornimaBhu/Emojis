@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example</title>
+    <link rel="stylesheet" href="./ex1.css" />
+</head>
+<body>
+    <div class="emotions">
+        <button class="emotion-button" data-emotion="happy">Happy</button>
+        <button class="emotion-button" data-emotion="angry">Angry</button>
+        <button class="emotion-button" data-emotion="sad">Sad</button>
+    </div>
+    <div id="container" style="display: none;">
+        <textarea id="textarea" maxlength="300" rows="14" cols="22"></textarea>
+        <p>Would you like to share?</p>
+        <input type="radio" name="share" value="yes" id="radio-yes">
+        <label for="radio-yes">Yes</label>
+        <input type="radio" name="share" value="no" id="radio-no">
+        <label for="radio-no">No</label>
+        <button id="submit-button">Submit</button>
+       
+    </div>
+    <!-- <div id="popup" class="popup" style="display: none;">
+        <div class="popup-content">
+            <p>Thank You for sharing your emotions!</p>
+            <button id="close-popup">Close</button>
+        </div> -->
+    </div>
+    <script>
+        const emotionButtons = document.querySelectorAll('.emotion-button');
+const container = document.getElementById('container');
+const textarea = document.getElementById('textarea');
+const submitButton = document.getElementById('submit-button');
+
+emotionButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        container.style.display = 'block';
+    });
+    popup.style.display = 'block';
+});
+
+
+// submitButton.addEventListener('click', function() {
+//     const selectedEmotion = document.querySelector('.emotion-button.active');
+//     const emotion = selectedEmotion ? selectedEmotion.getAttribute('data-emotion') : 'Unknown';
+//     const shareChoice = document.querySelector('input[name="share"]:checked').value;
+    
+//     const result = `Emotion: ${emotion}\nTextarea Content: ${textarea.value}\nShare Choice: ${shareChoice}`;
+//     alert(result);
+// });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Day</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <!-- <div> -->
+<h1>Today Your Emotions..</h1>
+<h4>How are You feeling today..?</h4>
+<!-- </div> -->
+<div>
+    <img src="../images/happy.png" /><br>
+    <button class="btn" id="happy" onclick="happy()">Happy</button>
+    <!-- <textarea id="myText" maxlength="300" rows="14" cols="22" style="display: none;"></textarea> -->
+    
+    <!-- <label id="label1" style="display: none;">Yes</label>
+    <input id="input0" style="display: none;" type="radio">
+    <label id="label2" style="display: none;">No</label>
+    <input id="input2" style="display: none;" type="radio">
+    <span id="h4" style="display: none;">Do You Wana Express Your Concern with Me..?<span></span> -->
+
+<div id="container" style="display: none;">
+    <textarea id="textarea" maxlength="300" rows="14" cols="22"></textarea>
+    <p>Would you like to share?</p>
+    <input type="radio" name="share" value="yes" id="radio-yes">
+    <label for="radio-yes">Yes</label>
+    <input type="radio" name="share" value="no" id="radio-no">
+    <label for="radio-no">No</label>
+    <button id="submit-button">Submit</button>
+</div>
+</div>
+<div>
+    <img src="../images/sad.png" /><br>
+    <button class="btn" id="sad" onclick="sad()">Sadness</button>
+    <textarea id="myText1" maxlength="30" rows="14" cols="22" style="display: none;"></textarea>
+</div>
+<div>
+    <img src="../images/fear.png" /><br>
+    <button class="btn" id="fear" onclick="fear()">Fear</button>
+    <textarea id="myText2" maxlength="300" rows="14" cols="22" style="display: none;"></textarea>
+</div>
+<div>
+    <img src="../images/anger.jpg" /><br>
+    <button class="btn" id="anger" onclick="anger()">Anger</button>
+    <textarea id="myText3" maxlength="300" rows="14" cols="22" style="display: none;"></textarea>
+</div>
+<div>
+    <img src="../images/surprise.jpg" /><br>
+    <button class="btn" id="surprice" onclick="surprise()">Surprise</button>
+    <textarea id="myText4" maxlength="300" rows="14" cols="22" style="display: none;"></textarea>
+</div>
+<div>
+    <img src="../images/boring.jpg" /><br>
+    <button class="btn" id="boring" onclick="boring()">Boring</button>
+    <textarea id="myText5" maxlength="300" rows="14" cols="22" style="display: none;"></textarea>
+</div>
+
+    <script>
+        function happy(){
+            var happy= document.getElementById("happy").innerText="Tell Me What made You Happy";
+            
+            const container = document.getElementById('container');
+const textarea = document.getElementById('textarea');
+const submitButton = document.getElementById('submit-button');
+happy.style.display = 'inline';
+
+
+        }
+        function sad(){
+            var sad= document.getElementById("sad").innerText="Tell Me What made You Sad";
+            // var textarea=document.getElementById("myText1")
+            // textarea.style.display="block";
+           
+
+
+happy.forEach(button => {
+    button.addEventListener('click', function() {
+        container.style.display = 'block';
+    });
+   
+});
+
+            
+
+
+        }
+        function fear(){
+            var fear= document.getElementById("fear").innerText="Tell Me What made You Fear";
+            var textarea=document.getElementById("myText2")
+            textarea.style.display="block"
+
+
+        }
+        function anger(){
+            var anger= document.getElementById("anger").innerText="Tell Me What made You Anger";
+            var textarea=document.getElementById("myText3")
+            textarea.style.display="block"
+
+
+        }
+        function surprise(){
+            var surprise= document.getElementById("surprice").innerText="Tell Me What made You Surprise";
+            var textarea=document.getElementById("myText4")
+            textarea.style.display="block"
+
+
+        }
+        function boring(){
+            var boring= document.getElementById("boring").innerText="Tell Me What made You Boring";
+            var textarea=document.getElementById("myText5")
+            textarea.style.display="block"
+
+
+        }
+        
+        
+    </script>
+</body>
+</html>

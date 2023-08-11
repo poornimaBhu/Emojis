@@ -1,0 +1,33 @@
+body{
+    background-color: #aee8be;
+}
+img{
+    height:170px;
+    width:170px;
+}
+.btn{
+    padding: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #65b5bf;
+    cursor: pointer;
+    width: 140px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    
+
+}
+div{
+    float: left;
+    margin-right: 40px;
+    background-color: #aaad8e;
+}
+/* input{
+    display: none;
+    flex-direction: column;
+}
+.active{
+    display: block;
+    height: 100px;
+    width: 100px;
+} */
